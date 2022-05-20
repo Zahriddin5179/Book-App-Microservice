@@ -1,22 +1,22 @@
-
-server:
-  port: 8086
-
-spring:
-  main:
-    web-application-type: reactive
-  aplication:
-    name: api-gateway
-
-  cloud:
-    gateway:
-      routes:
-        - id: bookList
-          uri: lb://bookList
-          predicates:
-            - Path=/api/book/**
-        - id: myCollection
-          uri: lb://myCollection
-          predicates:
-            - Path=/api/collection/**
-
+#
+#server:
+#  port: 8086
+#
+#spring:
+#  main:
+#    web-application-type: reactive
+#  aplication:
+#    name: api-gateway
+#
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: bookList
+#          uri: lb://bookList
+#          predicates:
+#            - Path=/api/book/**
+#        - id: myCollection
+#          uri: lb://myCollection
+#          predicates:
+#            - Path=/api/collection/**
+#

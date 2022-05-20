@@ -8,5 +8,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class CollectionDto {
-
+    private String bookTitle;
+    private String bookAuthorName;
 }

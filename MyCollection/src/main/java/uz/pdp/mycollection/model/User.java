@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import uz.pdp.mycollection.template.AbsEntity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.List;
@@ -20,6 +21,6 @@ public class User extends AbsEntity {
     private String email;
     private String password;
     private String phoneNumber;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     List<Role> roleList;
 }
